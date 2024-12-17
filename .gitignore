@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Build directories
+build/
+dist/
+jspm_packages/
+
+# Python
+__pycache__/
+*.env
+*.venv
+myenv/
+
+*.log
+local_settings.py
+db.sqlite3
+instance/
+.webassets-cache
+
+.DS_Store

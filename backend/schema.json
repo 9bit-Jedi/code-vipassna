@@ -1,0 +1,44 @@
+{
+  "playlists": {
+    "id": "string",
+    "title": "string",
+    "description": "string",
+    "channelId": "string",
+    "privacyStatus": "string",
+    "podcastStatus": "string",
+    "itemCount": "number",
+    "embedHtml": "string",
+    "localizations": {
+      "locale": {
+        "title": "string",
+        "description": "string"
+      }
+    },
+    "tracks": {
+      "id": "string",
+      "title": "string",
+      "artists": {
+        "name": "string",
+        "spotify_id": "string",
+        "apple_id": "string"
+      },
+      "album": {
+        "name": "string",
+        "spotify_id": "string",
+        "apple_id": "string"
+      },
+      "duration_ms": "number",
+      "isrc": "string",
+      "preview_url": "string",
+      "spotify_popularity": "number",
+      "apple_id": "string",
+      "track_number": "number",
+      "disc_number": "number",
+      "genreNames": ["string"],
+      "composerName": "string",
+      "releaseDate": "string",
+      "hasLyrics": "boolean",
+      "isAppleDigitalMaster": "boolean"
+    }
+  }
+}
