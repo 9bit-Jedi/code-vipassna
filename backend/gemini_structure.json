@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "properties": {
+    "playlists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "channelId": { "type": "string" },
+          "privacyStatus": { "type": "string" },
+          "podcastStatus": { "type": "string" },
+          "itemCount": { "type": "number" },
+          "embedHtml": { "type": "string" },
+          "localizations": {
+            "type": "object",
+            "properties": {
+              "locale": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "description": { "type": "string" }
+                },
+                "required": ["title", "description"]
+              }
+            },
+            "required": ["locale"]
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "title": { "type": "string" },
+                "artists": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "spotify_id": { "type": "string" },
+                    "apple_id": { "type": "string" }
+                  },
+                  "required": ["name"]
+                },
+                "album": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "spotify_id": { "type": "string" },
+                    "apple_id": { "type": "string" }
+                  },
+                  "required": ["name"]
+                },
+                "duration_ms": { "type": "number" },
+                "isrc": { "type": "string" },
+                "preview_url": { "type": "string" },
+                "spotify_popularity": { "type": "number" },
+                "apple_id": { "type": "string" },
+                "track_number": { "type": "number" },
+                "disc_number": { "type": "number" },
+                "genreNames": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "composerName": { "type": "string" },
+                "releaseDate": { "type": "string", "format": "date-time" },
+                "hasLyrics": { "type": "boolean" },
+                "isAppleDigitalMaster": { "type": "boolean" }
+              },
+              "required": ["id", "title", "artists", "album"]
+            }
+          }
+        },
+        "required": ["id", "title", "tracks"]
+      }
+    }
+  },
+  "required": ["playlists"]
+}
